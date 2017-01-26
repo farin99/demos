@@ -1,7 +1,8 @@
-import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from "@angular/core";
+import {Component, Input, Output, EventEmitter, ViewChild, ElementRef, ChangeDetectionStrategy} from "@angular/core";
 import {VirtualScrollComponent} from "../virtual-scroll/virtual-scroll";
 @Component({
     selector: 'sh-select-menu',
+    changeDetection: ChangeDetectionStrategy.OnPush,
     template:  `
         <div class="menu" *ngIf="isOpen && _rows" style="min-height: 35px;background-color: white">
           <!--virtual-->

@@ -5,9 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {ShSelectModule} from "../sh-select";
-import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import {SingleSelectComponent} from "./samples/single-select/single-select";
 import {SingleSelectObjectsComponent} from "./samples/single-select-objects/single-select-objects";
+import {ShCodeViewer} from "../code-viewer/code-viewer.module";
 
 @NgModule({
   declarations: [
@@ -21,9 +21,8 @@ import {SingleSelectObjectsComponent} from "./samples/single-select-objects/sing
     ReactiveFormsModule,
     HttpModule,
     ShSelectModule,
-    HighlightJsModule
+    ShCodeViewer
   ],
-  providers: [HighlightJsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,13 +2,14 @@
  * Created by yonifarin on 12/3/16.
  */
 import {
-    Component, OnInit, ElementRef, Input, forwardRef, ViewChild, Renderer, Output,
-    EventEmitter
+  Component, OnInit, ElementRef, Input, forwardRef, ViewChild, Renderer, Output,
+  EventEmitter, ChangeDetectionStrategy
 } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @ Component({
     selector: 'sh-select',
+    changeDetection: ChangeDetectionStrategy.OnPush,
     template:`<div class="header" [class.inline]="mode==='inline'"
      (click)="show()" [class.open]="isOpen">
     <input type="text"
